@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>滤镜</title>
+		<style type="text/css">
+			img{
+				width: 400px;
+				height: auto;
+				/* 居中 */
+				display: block;/* 设为块级 */
+				margin: 0 auto;
+				/* 滤镜属性
+				   grayscale()：设置灰度 0-1
+				 */
+				-webkit-filter: grayscale(0.9);
+				/* 设置变化过渡 */
+				transition: all 3s;
+			}
+			img:hover{/* 鼠标悬浮后的效果 */
+				-webkit-filter: none;/* 没有滤镜 */
+			}
+			/* .指向class  #指向id */
+			.img1{
+				/* 滤镜属性
+				   grayscale()：设置灰度 0-1
+				 */
+				-webkit-filter: grayscale(0.9);
+				/* 过渡变化 */
+				transition: all 3s;
+			}
+			.img2{
+				/* 滤镜属性
+				  brightness():亮度 默认值为1为正常值 0为黑 2 曝光效果
+				 */
+				-webkit-filter: brightness(2);
+			}
+			.img3{
+				/* 褐色属性
+				sepia()：1为百分之百 0为正常
+				*/
+				-webkit-filter: sepia(0.5);
+			}
+			.img4{
+				/* 模糊度
+				blur(): 单位为像素
+				 */
+				-webkit-filter: blur(5px);
+			}
+			.img5{
+				/*对比度
+				 contrast:正常值为1,0-》没有任何对比度，变为灰色
+				 */
+				-webkit-filter: contrast(1.5);
+			}
+			.img6{
+				/*饱和度
+				 saturate:饱和值 1为正常
+				 */
+				-webkit-filter: saturate(2);
+			}
+			.img7{
+				/*胶片底色效果
+				 invert:
+				 */
+				-webkit-filter: invert(1.5);
+			}
+			.img8{
+				/*色相旋转
+				 hue-rotate:0-360deg为一圈，360deg为原图
+				 */
+				-webkit-filter: hue-rotate(360deg);
+			}
+			.img9{
+				/*画图效果*/
+				-webkit-filter: blur(10px) brightness(10) grayscale(1);
+				transition: all 10s;
+			}
+			.img9:hover{
+				-webkit-filter: blur(0px) brightness(1) grayscale(0);
+			}
+		</style>
+	</head>
+	<body>
+		<img class="img1" src="img/pic.jpg" >
+		<img class="img2" src="img/pic.jpg" >
+		<img class="img3" src="img/pic.jpg" >
+		<img class="img4" src="img/pic.jpg" >
+		<img class="img5" src="img/pic.jpg" >
+		<img class="img6" src="img/pic.jpg" >
+		<img class="img7" src="img/pic.jpg" >
+		<img class="img8" src="img/pic.jpg" >
+		<img class="img9" src="img/pic.jpg" >
+	</body>
+</html>
